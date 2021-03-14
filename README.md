@@ -3,9 +3,9 @@
 Um aplicativo simples que armazena informações de produtos que você esteja vendendo
 
 # FUNÇÕES
-Realiza calculo de lucro para cada produto que for vendido;
-Armazena dados, como: Nome do produto, Preço, Estoque, Imagem Ilustrativa, Descrição e Lucro obtido;
-Permite a edição, adição e excluão de dados;
+* Realiza calculo de lucro para cada produto que for vendido;
+* Armazena dados, como: Nome do produto, Preço, Estoque, Imagem Ilustrativa, Descrição e Lucro obtido;
+* Permite a edição, adição e excluão de dados;
 
 # IMAGENS ILUSTRATIVAS
 ## Tela Inicial
