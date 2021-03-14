@@ -9,7 +9,7 @@ Um aplicativo simples que armazena informações de produtos que você esteja ve
 
 # IMAGENS ILUSTRATIVAS
 ## Tela Inicial
-![Tela Inicial](https://github.com/CardosofGui/projeto-sqlite/blob/main/print-app/back-3.jpeg)
+![Tela Inicial](https://ibb.co/RcKVFdp)
 ## Criando Produto
 ![Tela Editando produto](https://github.com/CardosofGui/projeto-sqlite/blob/main/print-app/back-2.jpeg)
 ## Editando Produto
