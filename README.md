@@ -10,9 +10,9 @@ Permite a edição, adição e excluão de dados;
 # IMAGENS ILUSTRATIVAS
 ## Tela Inicial
 ![Tela Inicial](https://github.com/CardosofGui/projeto-sqlite/blob/main/print-app/back-3.jpeg)
-## Editando Produto
-![Tela Editando produto](https://github.com/CardosofGui/projeto-sqlite/blob/main/print-app/back-2.jpeg)
 ## Criando Produto
+![Tela Editando produto](https://github.com/CardosofGui/projeto-sqlite/blob/main/print-app/back-2.jpeg)
+## Editando Produto
 ![Tela Criando produto](https://github.com/CardosofGui/projeto-sqlite/blob/main/print-app/back1.jpeg)
 
 # MELHORIAS FUTURAS
