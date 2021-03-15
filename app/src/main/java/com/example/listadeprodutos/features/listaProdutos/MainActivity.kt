@@ -6,22 +6,18 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.listadeprodutos.R
-import com.example.listadeprodutos.features.helpers.HelperBD
+import com.example.listadeprodutos.features.ApplicationActivity
 import com.example.listadeprodutos.features.produtoCRUD.ResumoCrud
-import com.example.listadeprodutos.features.model.Produto
-import com.example.listadeprodutos.features.model.ResumoAdapter
+import com.example.listadeprodutos.features.listaProdutos.model.Produto
+import com.example.listadeprodutos.features.listaProdutos.model.ResumoAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar.*
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var bdResumo : HelperBD
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        bdResumo = HelperBD(this)
 
         gerarRecyclerView()
         acoesClickActivity()
@@ -47,10 +43,21 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun buscarProduto() {
-        val listaProdutoFiltro : List<Produto> = bdResumo.buscarProduto(edtBusca.text.toString())
+        var listaProdutoFiltro : List<Produto>? = null
 
-        val adapter = ResumoAdapter(this, listaProdutoFiltro) { acaoClickProduto(it) }
-        recyclerViewProduto.adapter = adapter
+        loadingProduto.visibility = View.VISIBLE
+
+        Thread(Runnable {
+            Thread.sleep(1500)
+
+            listaProdutoFiltro = ApplicationActivity.instance.dbProduto!!.buscarProduto(edtBusca.text.toString())
+
+            runOnUiThread{
+                val adapter = ResumoAdapter(this, listaProdutoFiltro!!) { acaoClickProduto(it) }
+                recyclerViewProduto.adapter = adapter
+                loadingProduto.visibility = View.GONE
+            }
+        }).start()
     }
 
     private fun gerarRecyclerView() {
@@ -67,4 +74,6 @@ class MainActivity : AppCompatActivity() {
         buscarProduto()
         super.onResume()
     }
+
+
 }

@@ -3,7 +3,7 @@ package com.example.listadeprodutos.features.helpers
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import com.example.listadeprodutos.features.model.Produto
+import com.example.listadeprodutos.features.listaProdutos.model.Produto
 
 class HelperBD(
     mContext: Context

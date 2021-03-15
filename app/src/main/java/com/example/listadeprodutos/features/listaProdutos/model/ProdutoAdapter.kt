@@ -1,4 +1,4 @@
-package com.example.listadeprodutos.features.model
+package com.example.listadeprodutos.features.listaProdutos.model
 
 import android.content.Context
 import android.view.LayoutInflater
